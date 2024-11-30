@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow">
+          <div class="card-body">
+            <h3 class="card-title text-center mb-4">Booking Form</h3>
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nama" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label for="checkIn" class="form-label">Check-In Date</label>
+                <input type="date" class="form-control" id="checkIn" required>
+              </div>
+              <div class="mb-3">
+                <label for="checkOut" class="form-label">Check-Out Date</label>
+                <input type="date" class="form-control" id="checkOut" required>
+              </div>
+              <div class="mb-3">
+                <label for="jumlahTamu" class="form-label">Number of Guest</label>
+                <input type="number" class="form-control" id="jumlahTamu" placeholder="Enter the number of guests" required>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Booking</button>
+              </div>
+            </form>
+            <div id="bookingMessage" class="text-success mt-3 d-none">Booking was successfully!</div>
+            <div id="backToHome" class="mt-3 d-none text-center">
+              <a href="index.html" class="btn btn-outline-primary">Return to the main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('bookingMessage').classList.remove('d-none');
+      document.getElementById('backToHome').classList.remove('d-none');
+    });
+  </script>
+</body>
+</html>
